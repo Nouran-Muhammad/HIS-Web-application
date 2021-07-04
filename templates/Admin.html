@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block mainbody %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>obgyn - Copy</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/css/Footer-Dark.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/css/Navigation-with-Button.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/css/project-card.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/css/Simple-Slider.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='cards/css/styles.css')}}">
+</head>
+
+<body>
+    <p style="text-align:center; font-size: 40px;"> Hello {{session['username']}} ! </p>
+    <p class="mt-3 mb-0"><a class="text-info small" href="{{ url_for('logout')}}" style="text-align: center;margin: 10px; font-size: 20px; font-weight: bold;">Logout</a></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-white border rounded shadow-lg" data-bss-hover-animate="pulse"
+                    style="width: 230px;height: 350px;margin: 10px;margin-left: 15px;">
+                    <div class="card-body" style="width: 205px;height: 350px;padding: 0px;margin: 10px;"><img
+                            src="{{ url_for('static', filename='cards/img/doctors.jpeg')}}"
+                            class="d-lg-flex m-auto align-items-lg-center"
+                            style="width: 205px;height: 115.31px;margin-left: 0px;padding-left: 0px; background-size: contain;">
+                        <h4 class="card-title" style="margin-top: 5px;">Doctors</h4>
+                        <p class="card-text" style="width: 180px;margin-top: 15px;margin-bottom: 20px;">Choose to add or
+                            view doctors</p>
+                        <div class="btn-group" role="group"><button class="btn btn-primary" type="button"
+                                onclick="window.location.href='{{ url_for('addDoctor')}}'"
+                                style="background-color: rgb(72,72,72);">Add</button><button class="btn btn-primary"
+                                type="button" onclick="window.location.href='{{ url_for('viewdoctor') }}'"
+                                style="margin-left: 7px;">View</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-white border rounded shadow-lg" data-bss-hover-animate="pulse"
+                    style="width: 230px;height: 350px;margin: 10px;margin-left: 15px;">
+                    <div class="card-body" style="width: 205px;height: 350px;padding: 0px;margin: 10px;"><img
+                            src="{{ url_for('static', filename='cards/img/patients.jpeg')}}"
+                            class="d-lg-flex m-auto align-items-lg-center"
+                            style="width: 205px;height: 115.31px;margin-left: 0px;padding-left: 0px; background-size: contain;">
+                        <h4 class="card-title" style="margin-top: 5px;">Patients</h4>
+                        <p class="card-text" style="width: 180px;margin-top: 15px;margin-bottom: 20px;">Choose to add or
+                            view patients<br></p>
+                        <div class="btn-group" role="group"><button class="btn btn-primary" type="button"
+                                onclick="window.location.href='{{ url_for('addPatient') }}'"
+                                style="background-color: rgb(72,72,72);">Add</button><button class="btn btn-primary"
+                                onclick="window.location.href='{{ url_for('viewpatient') }}'" type="button"
+                                style="margin-left: 7px;">View</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-white border rounded shadow-lg" data-bss-hover-animate="pulse"
+                    style="width: 230px;height: 350px;margin: 10px;margin-left: 15px;">
+                    <div class="card-body" style="width: 205px;height: 350px;padding: 0px;margin: 10px;"><img
+                            src="{{ url_for('static', filename='cards/img/contact.jpeg')}}"
+                            class="d-lg-flex m-auto align-items-lg-center"
+                            style="width: 205px;height: 115.31px;margin-left: 0px;padding-left: 0px; background-size: contain;">
+                        <h4 class="card-title" style="margin-top: 5px;">Contact Us</h4>
+                        <p class="card-text" style="width: 180px;margin-top: 15px;margin-bottom: 20px;">view contact us
+                            forms&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+                        <div class="btn-group" role="group" style="width: 73.2375px;"><button class="btn btn-primary"
+                                type="button" onclick="window.location.href='http://127.0.0.1:5000/ViewContact'"
+                                style="margin-left: 7px;background: rgb(86,198,198);border-width: 0px;border-radius: 20px;height: 40px;width: 73.2375px;padding: 8px 16px;">view</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static',filename='cards/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='cards/js/bs-init.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static',filename='cards/js/Simple-Slider.js')}}"></script>
+</body>
+
+
+
+{% endblock %}
