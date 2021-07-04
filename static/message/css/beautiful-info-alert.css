@@ -1,0 +1,14 @@
+.beautiful.alert {
+  border-width: 1px;
+  background-image: none;
+  border-color: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.alert.alert-info.beautiful.alert-info {
+  background-color: #e0ebf9;
+  border-color: #e0ebf9;
+  color: #327ad5;
+}
+
