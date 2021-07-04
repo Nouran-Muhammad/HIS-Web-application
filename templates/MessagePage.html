@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block mainbody  %}
+<!DOCTYPE html>
+<html lang="en" style="box-shadow: 0px 0px 0px 0px var(--bs-cyan);">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Alert</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='message/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Telivigala">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="{{url_for('static',filename='message/css/beautiful-info-alert.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='message/css/styles.css')}}" >
+</head>
+
+<body style="transform: perspective(0px);color: rgb(212,221,231);text-shadow: 0px 0px 0px var(--bs-warning);box-shadow: 0px 0px;">
+    <div class="alert alert-info beautiful" role="alert" style="background: #aae2c8;font-family:Times New Roman  ;text-align: center;font-size: 30px;color: var(--bs-success);text-shadow: 0px 0px 20px var(--bs-light), 0px 0px;margin: 0px;margin-top: 180px;margin-bottom: 230px;box-shadow: 0px 0px 0px 0px var(--bs-success);">Your messeage was sent and is being reviewed, thank you for reaching out. </div>
+    <script src="{{url_for('static',filename='message/bootstrap/js/bootstrap.min.js')}}" ></script>
+</body>
+
+</html>
+{% endblock %}

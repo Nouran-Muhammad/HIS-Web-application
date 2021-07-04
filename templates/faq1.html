@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block mainbody %}
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>faq</title>
+        <link re1="stylesheet" href= "{{ url_for('static',filename='faqassets/bootstrap/css/bootstrap.min.css')}}">
+        <link re1="stylesheet" href= "{{ url_for('static',filename='faqassets/css/Article-Clean.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+        <link re1="stylesheet" href= "{{ url_for('static',filename='faqassets/css/styles.css')}}">
+        <link re1="stylesheet" href= "{{ url_for('static',filename='img/prego.jpg')}}">
+
+    </head>
+
+    <body>
+        <section class="article-clean">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                        <div class="intro">
+                            <h1 class="text-center">Frequently Asked Questions</h1><img class="img-fluid" src="{{url_for('static',filename='faqassets/img/prego.jpg')}}">
+                        </div>
+                        <div class="text">
+                            <h2>What is gynecology?<br></h2>
+                            <p>Gynecology is medical care that deals with women’s and girls’ reproductive system. Gynecology is about keeping them healthy as well as treating medical conditions and illnesses having to do with the reproductive system. An obstetrician-gynecologist (ob-gyn) is a doctor who specializes in women’s health care.<br></p>
+                            <h2>When should I first see a gynecologist?<br></h2>
+                        </div>
+                        <p>According to the American College of Obstetricians and Gynecologists (ACOG), the nation’s leading group of physicians dedicated to improving women’s health, your first visit to a gynecologist should be between the ages of 13 years and 15 years. The first visit can range from just a talk between you and your doctor to having certain testing or exams done. All information shared with your provider is kept confidential.<br></p>
+                        <h6 style="height: 29px;margin: 28px 0px 28px;color: rgb(51, 51, 51);font-size: 20px;"><strong>What should I bring to my first appointment?</strong><br></h6>
+                        <p>For your first appointment, please bring your health insurance card (if applicable), valid photo ID, and any outstanding medical records that have not already been received by the Center. We also highly recommend that you bring a spouse, partner, family member, or friend for support.<br></p>
+                        <h6 style="height: 29px;margin: 28px 0px 28px;color: rgb(51, 51, 51);font-size: 20px;"><strong>Can I bring family members to appointments?</strong><br></h6>
+                        <p>You may bring up to two additional family members or friends, including your spouse or partner. Children under 12 are not permitted at the center.<br></p>
+                        <h6 style="height: 29px;margin: 28px 0px 28px;color: rgb(51, 51, 51);font-size: 20px;"><strong>What if I need to cancel my appointment?</strong><br></h6>
+                        <p>We request at least 24-hour notice if you need to cancel or reschedule an appointment. Please call at our numbers to cancel your booked appointment.<br></p>
+                        <h6 style="height: 29px;margin: 28px 0px 28px;color: rgb(51, 51, 51);font-size: 20px;"><strong>Can multiple ultrasounds during pregnancy harm the fetus?/Is it harmful to get an MRI during pregnancy?</strong><br></h6>
+                        <p>Ultrasounds performed either abdominally or transvaginally are safe during pregnancy. Additionally, MRI during pregnancy is believed to be safe with no adverse risks on unborn babies.<br></p>
+                        <h6 style="height: 29px;margin: 28px 0px 28px;color: rgb(51, 51, 51);font-size: 20px;"><strong>I have an inquiry/complain.</strong><br></h6>
+                        <p>Please contact us via our numbers or our "Contact us" form.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static',filename='faqassets/bootstrap/js/bootstrap.min.js')}}"></script>
+    </body>
+{% endblock %}

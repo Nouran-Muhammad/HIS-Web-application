@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact us</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,80">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/fonts/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/Contact-Form-Clean.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/JLX-Contact-Form-with-Placeholder-FI.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/PHP-Contact-Form-dark-1.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/PHP-Contact-Form-dark.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/TD-BS4-Simple-Contact-Form-1.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='contact/css/TD-BS4-Simple-Contact-Form.css')}}">
+
+</head>
+
+<body style="width: 500;height: 600;border-radius: 20px;background: var(--bs-light);">
+    <section class="td-form" style="border-radius: 20px;"></section>
+    <section class="td-form">
+        <div class="row td-form-wrapper" style="background: var(--bs-light);">
+            <div class="col td-glass"
+                style="width: 400px;height: 485px;background: #aae2c8 ;border-color: var(--bs-white );border-radius: 15px;">
+                <form action=" http://127.0.0.1:5000/contact" method="POST" class="td-form-wrapper"
+                    style="background: var(--bs-light);border-color: var(--bs-white);height: 420px;">
+                    <h1 class="text-center"
+                        style="font-family: Raleway, sans-serif;color: var(--bs-success);margin-bottom: 5px;margin-top: 5px;">
+                        Contact Us</h1>
+                    <div class="form-group mb-3">
+                        <div class="col-md-12"><label class="form-label" for="email">Email Address *</label>
+                            <div class="d-flex"><i class="icon ion-ios-email align-self-center"></i>
+                                <input class="form-control" type="text" autocomplete="off" name="email" required=""
+                                    placeholder="name@gmail.com" inputmode="email"
+                                    style="background: var(--bs-light);border-color: #0da0a0;border-top-color: rgb(64,;border-right-color: 98,;border-bottom-color: 134);border-left-color: 98,;margin-right: 5px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="col-md-12"><label class="form-label" for="email">Message Type *</label>
+                            <div class="d-flex">
+                                <i class="icon ion-android-create align-self-center">
+                                </i><input class="form-control" type="text" autocomplete="off" name="type" required=""
+                                    placeholder=" Enquiry or Suggestion or Complain" inputmode="email"
+                                    style="background: var(--bs-light);border-color: #0da0a0;border-top-color: rgb(64,;border-right-color: 98,;border-bottom-color: 134);border-left-color: 98,;margin-right: 5px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="col-md-12" style="margin-top: -5px;"><label class="form-label" for="message"
+                                style="margin-bottom: 9px;">Message Details *</label>
+                            <div class="d-flex td-input-container">
+                                <i class="icon ion-android-create align-self-center" style="margin-bottom: 120px;"></i>
+                                <textarea class="form-control" placeholder="Add meaningful message here" name="message"
+                                    rows="6" cols="50"
+                                    style="width: 500;height: 130px;background: var(--bs-light);border-color: #0da0a0;margin-right: 5px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark float-end" type="submit"
+                        style="margin-top: 7.5px;margin-bottom: 50px;background: rgb(243,254,241);border-color: rgb(187,174,190);border-radius: 10px;color: var(--bs-success);text-align: center;margin-right: 0px;">Send
+                        us your message!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {{ msg }}
+    <script src="{{url_for('static',filename='contact/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='contact/js/PHP-Contact-Form-dark-1.js')}}"></script>
+    <script src="{{url_for('static',filename='contact/js/PHP-Contact-Form-dark.js')}}"></script>
+</body>
+
+{% endblock %}
